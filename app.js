@@ -35,7 +35,7 @@ const static = express.static(dist);
 
 app.use(static);
 app.listen(4200);
-
+app.use(express.static("public"));
 proxyConfig.forEach((element) => {
     const context = element.context;
     delete element.context;
